@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 
 import teamImg from '../assets/Team.jpg';
-import ceoVd from '../assets/CEO-TALK-44SECONDS.mp4';
+
 import CEO1 from '../assets/CEO-PIC.png';
 import CEO2 from '../assets/ceo2Img.png';
 import mission from '../assets/Mission.png';
@@ -68,121 +68,6 @@ const AboutUs = () => {
       {/* About Section */}
      
 
-
-    {/* <div className="text-center max-w-4xl mx-auto mb-16">
-  <p className="text-xl text-gray-700 leading-relaxed mb-8">
-    At Synergy, our priority is to truly understand the expectations of global engineering OEMs and translate them into our key goals. We focus on delivering quality, value, and dependability in every project.
-  </p>
-</div> */}
-
-
-{/* Core Values Section */}
-{/* <div className="grid md:grid-cols-3 gap-12 mb-16 px-6">
-  {[
-    {
-      title: "Quality",
-      description: "Quality that is repeatable and ensures precision at every stage.",
-      icon: "🎯",
-    },
-    {
-      title: "Value & Savings",
-      description: "Real savings through efficient manufacturing processes and engineering expertise.",
-      icon: "💰",
-    },
-    {
-      title: "Delivery",
-      description: "Always dependable with robust supply chain processes.",
-      icon: "🚚",
-    },
-  ].map((goal, index) => (
-    <div
-      key={index}
-      className="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all border-t-4 border-blue-600 transform hover:scale-105"
-    >
-      <div className="text-5xl text-blue-600 mb-4">{goal.icon}</div>
-      <h3 className="text-2xl font-semibold text-blue-600 mb-2">{goal.title}</h3>
-      <p className="text-gray-600 text-lg">{goal.description}</p>
-    </div>
-  ))}
-</div> */}
-
-{/* Expertise Section */}
-{/* <div className="px-6 md:px-12 mb-24">
-  <div className="lg:flex lg:gap-16 mb-24">
-    <div className="lg:w-1/2 space-y-8">
-      <h3 className="text-5xl font-bold text-blue-600 mb-6 hover:text-blue-800 transform transition-all duration-300">
-        Our Expertise
-      </h3>
-      <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-        Based in India, we are a leading contract manufacturing solutions company with deep hands-on domain expertise in a diverse spectrum of manufacturing processes. Our specialization includes:
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg text-gray-700">
-        {[
-          "Castings, Forgings, and Precision Machining",
-          "Sheet Metal Stamping & Fabrication",
-          "Moulding of Rubber and Plastics",
-          "Electrical Coils for Motors & Generators",
-          "Electrical Insulating Materials",
-          "Dies & Tools for Die Casting & Moulding",
-          "Contract Assembly",
-        ].map((item, index) => (
-          <div key={index} className="flex items-start gap-4">
-            <span className="w-4 h-4 bg-blue-600 rounded-full mt-1"></span>
-            <p>{item}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div className="lg:w-1/2 bg-blue-50 p-12 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-      <h3 className="text-3xl font-bold text-blue-600 mb-6">Our Processes</h3>
-      <ul className="space-y-6 text-lg text-gray-700">
-        {[
-          "Research, Assessment & Qualification of manufacturers",
-          "New Product Development, Project Management & real-time reporting",
-          "Manufacturing Process Development & Value Engineering",
-          "Quality Assurance & Quality Control at manufacturing sites",
-          "Lean supply chain with full visibility for buyers",
-        ].map((step, index) => (
-          <li key={index} className="flex items-start gap-4">
-            <span className="w-5 h-5 bg-blue-600 rounded-full mt-1"></span>
-            <p>{step}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div> */}
-
-  {/* Strength and Customer Focus Section */}
-  {/* <div className="lg:flex lg:gap-16 mb-24">
-    <div className="lg:w-1/2 p-8 bg-blue-100 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-      <h3 className="text-3xl font-bold text-blue-600 mb-6">Our Strength</h3>
-      <p className="text-lg text-gray-700">
-        Our strength lies in handling low to medium-volume production with high complexity, ensuring precision and quality in every project. We focus on customer-centric solutions that address both stated and implied needs.
-      </p>
-    </div>
-
-    <div className="lg:w-1/2 bg-blue-100 p-12 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-      <h3 className="text-3xl font-bold text-blue-600 mb-6">Customer Focused</h3>
-      <p className="text-lg text-gray-700">
-        With a professional approach and swift execution in every interaction, we ensure seamless results at every stage. Our customers' satisfaction is our top priority, and we focus on both stated and implied needs to guarantee excellence.
-      </p>
-    </div>
-  </div>
-*/}
-  {/* Closing Section */}
-  {/* <div className="bg-blue-400 text-white py-16 px-6 rounded-lg shadow-xl text-center relative overflow-hidden">
-    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-500 to-blue-700 opacity-50"></div>
-    <div className="relative z-10">
-      <p className="text-lg leading-relaxed mb-6 opacity-90">
-        With a professional approach and swift execution in every interaction, we ensure seamless results at every stage. Your goals are our priority.
-      </p>
-      <p className="text-3xl font-extrabold transform transition-all duration-500 ease-in-out hover:scale-110">
-        Our commitment to quality and precision sets us apart in the industry.
-      </p>
-    </div>
-  </div>
-</div>  */}
 
 <div className="bg-gradient-to-b from-gray-50 to-white text-gray-800">
   {/* Three Card Section */}
@@ -358,7 +243,7 @@ const AboutUs = () => {
             controls
             className="rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 w-full"
           >
-            <source src={ceoVd} type="video/mp4" />
+          
             Your browser does not support the video tag.
           </video>
         </div>
