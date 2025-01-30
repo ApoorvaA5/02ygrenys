@@ -7,6 +7,7 @@ import Products from './pages/Products';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Solutions from './pages/Solutions';
+
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/solutions"element={Solutions}/>
+        <Route path="/solutions" element={<Solutions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
       </Routes>
@@ -24,3 +25,4 @@ function App() {
 }
 
 export default App;
+
