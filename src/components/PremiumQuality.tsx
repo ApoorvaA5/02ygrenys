@@ -52,6 +52,7 @@ const PremiumQuality = () => {
     <div className="bg-black text-white py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-12">
+          
           {/* Left Content Section */}
           <div className="lg:w-1/3">
             <h2 className="text-[#00B4D8] text-4xl font-bold mb-4">
@@ -85,9 +86,24 @@ const PremiumQuality = () => {
                   transition={{ type: "spring", stiffness: 100 }}
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="p-2 bg-gray-50 rounded">
-                      <feature.icon className="w-8 h-8 text-gray-700" />
+                    {/* Animated Icon Wrapper */}
+                    <div className="relative w-14 h-14 flex items-center justify-center">
+                      {/* Rotating Gradient */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-skyblue-500/20 to-blue-500/20 rounded-full"
+                        animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                      />
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-tr from-blue-400/30 via-skyblue-400/30 to-blue-400/30 rounded-full"
+                        animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
+                        transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                      />
+                      {/* Icon */}
+                      <feature.icon className="w-8 h-8 text-gray-700 relative z-10" />
                     </div>
+                    
+                    {/* Feature Title */}
                     <h4 className="text-gray-800 font-medium">
                       {feature.title}
                     </h4>
@@ -96,6 +112,7 @@ const PremiumQuality = () => {
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </div>

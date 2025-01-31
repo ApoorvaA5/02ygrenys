@@ -106,17 +106,19 @@ const IntegratedManufacturing = () => {
                   />
                 </motion.div>
                 <h3 className="text-xl font-bold text-[#00B4D8] text-center">{feature.title}</h3>
-                <ul className="space-y-3 text-gray-700 text-center">
+                
+                {/* Properly Aligned List Items */}
+                <ul className="space-y-3 text-gray-700 text-left flex-1 w-full">
                   {feature.points.map((point, pointIndex) => (
                     <motion.li 
                       key={pointIndex}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 1 + pointIndex * 0.1 }}
-                      className="flex items-start"
+                      className="flex items-start gap-x-2"
                     >
-                      <span className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-[#00B4D8] flex-shrink-0" />
-                      <span className="transition-colors duration-300">{point}</span>
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#00B4D8] flex-shrink-0" />
+                      <span className="leading-tight">{point}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -136,3 +138,4 @@ const IntegratedManufacturing = () => {
 };
 
 export default IntegratedManufacturing;
+

@@ -1,142 +1,104 @@
-import React, { useEffect } from 'react';
-import { FaSearch, FaChartLine, FaIndustry, FaClipboardCheck, FaTasks, FaUsers, FaEye, FaShieldAlt, FaTools } from 'react-icons/fa';
+import React from 'react';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-const Solutions: React.FC = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
-
-  // Card Data
-  const cards = [
-    {
-      title: "Comprehensive Supplier Research",
-      description:
-        "We empower you to make informed techno-commercial and strategic decisions, ensuring a seamless and successful sourcing experience from India.",
-      icon: <FaSearch className="text-sky-400 text-4xl" />,
-    },
-    {
-      title: "Sourcing Strategy Expertise",
-      description:
-        "Leverage deep research and market data to assess market readiness.",
-      icon: <FaChartLine className="text-sky-400 text-4xl" />,
-    },
-    {
-      title: "Vast Industrial Experience",
-      description:
-        "A team with 200+ years of combined expertise in global markets, serving clients across the U.S., Europe, Canada, and beyond.",
-      icon: <FaIndustry className="text-sky-400 text-4xl" />,
-    },
-    {
-      title: "End-to-End Project Support",
-      description: "Supplier research, contract finalization, product development, and process controls.",
-      icon: <FaClipboardCheck className="text-sky-400 text-4xl" />,
-    },
-  ];
-
-  const supplierDevelopmentCards = [
-    {
-      title: "Supplier Evaluation",
-      description:
-        "Conduct a thorough assessment of a supplier's current performance and identify opportunities for improvement through audits, surveys, scorecards, and benchmarking.",
-      icon: <FaTasks className="text-white text-4xl" />,
-    },
-    {
-      title: "Collaborative Engagement",
-      description:
-        "Foster strong partnerships with suppliers to build meaningful connections and unlock mutual benefits.",
-      icon: <FaUsers className="text-white text-4xl" />,
-    },
-    {
-      title: "Performance Monitoring",
-      description:
-        "Establish robust systems to track supplier performance and ensure standardized quality metrics.",
-      icon: <FaEye className="text-white text-4xl" />,
-    },
-    {
-      title: "Quality Assurance Audits",
-      description:
-        "Implement regular quality audits to maintain and enhance product and service standards.",
-      icon: <FaShieldAlt className="text-white text-4xl" />,
-    },
-    {
-      title: "Proactive Corrective Measures",
-      description:
-        "Adopt a collaborative approach to address and resolve issues effectively, driving continuous improvement.",
-      icon: <FaTools className="text-white text-4xl" />,
-    },
-  ];
-
+const Solutions = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-black min-h-screen text-white">
       {/* Banner Section */}
       <div
         style={{
-          backgroundImage: `url(/solutionsBanner.jpeg)`, // Updated to use the public folder path
+          backgroundImage: `url(/solutionsBanner.jpeg)`, // Image from the public folder
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           height: '90vh',
           width: '100%',
         }}
-        className="relative flex items-center justify-center text-white"
+        className="relative"
       >
-        <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-        <h1 className="text-5xl font-bold relative z-10 animate-fadeIn">
-          Our Solutions
-        </h1>
-      </div>
-
-      {/* Supplier Research & Sourcing Strategy */}
-      <div className="relative py-16 px-6 md:px-16 bg-black text-white">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#00B4D8]">
-            Supplier Research & Sourcing Strategy
-          </h1>
-
-          {/* Cards Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white text-gray-900 p-6 rounded-xl shadow-lg flex flex-col items-center"
-                data-aos="zoom-in"
-              >
-                {card.icon}
-                <h3 className="text-2xl font-semibold text-sky-400 mt-4">
-                  {card.title}
-                </h3>
-                <p className="mt-3 text-gray-700 text-center">{card.description}</p>
-              </div>
-            ))}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50">
+          <div className="max-w-7xl mx-auto h-full flex flex-col justify-center px-6">
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
+              Our <span className="text-[#00B4D8]">Solutions</span>
+            </h1>
           </div>
         </div>
       </div>
 
-      {/* Supplier Development Section with Different Design */}
-      <div className="relative py-16 px-6 md:px-16 bg-gradient-to-r from-blue-900 to-blue-600 text-white">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
-            Supplier Development
-          </h1>
-
-          {/* Cards Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {supplierDevelopmentCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white bg-opacity-10 p-6 rounded-2xl shadow-xl flex flex-col items-center border border-white backdrop-blur-lg"
-                data-aos="fade-up"
-              >
-                {card.icon}
-                <h3 className="text-2xl font-semibold text-white mt-4">
-                  {card.title}
-                </h3>
-                <p className="mt-3 text-white text-center opacity-90">{card.description}</p>
-              </div>
-            ))}
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        {/* Supplier Research Section */}
+        <div className="mb-20">
+          <div className="flex items-center space-x-4 mb-12">
+            <h2 className="text-4xl font-bold text-[#00B4D8]">Supplier Research</h2>
           </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <p className="text-xl leading-relaxed text-gray-300">
+                Synergy specializes in conducting comprehensive supplier research & evaluation for 
+                any engineering product or service. We empower you to make informed techno-commercial 
+                and strategic commercial decisions, ensuring a seamless and successful sourcing 
+                experience from India.
+              </p>
+
+              <div className="space-y-6">
+                <div className="border-l-4 border-[#00B4D8] pl-6">
+                  <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Sourcing Strategy Expertise</h3>
+                  <p className="text-gray-300">
+                    Leverage deep research and market data to assess market readiness.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#00B4D8] pl-6">
+                  <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Vast Industrial Experience</h3>
+                  <p className="text-gray-300">
+                    A team with 200+ years of combined expertise in Indian and international markets, 
+                    serving clients from the U.S., Europe, Canada, New Zealand, China & the U.K.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content - Image Replacement */}
+            <div className="bg-[#1a1a1a] p-6 rounded-lg">
+              {/* Image replaces the End-to-End card */}
+              <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYF0YanUZXIE_THjLVGQxkCzM-NanaKBLlA&s" 
+                alt="Supplier Research"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* New Supplier Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          {[
+            {
+              title: "Supplier Research and Evaluation",
+              description: "Thorough research and evaluation to ensure the best sourcing decisions."
+            },
+            {
+              title: "Due Diligence and Contract Finalization",
+              description: "Ensuring a smooth process from evaluation to finalizing contracts."
+            },
+            {
+              title: "Product Development Management and Process Controls",
+              description: "Guidance on managing product development and ensuring quality controls."
+            },
+            {
+              title: "First Article Qualification (F.A.I./P.P.A.P.) and Final Inspections",
+              description: "Ensuring the first article is properly qualified and final inspections are carried out."
+            }
+          ].map((feature, index) => (
+            <div 
+              key={index}
+              className="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 hover:border-[#00B4D8] transition-colors duration-300"
+            >
+              <h3 className="text-xl font-bold text-[#00B4D8] mb-3">{feature.title}</h3>
+              <p className="text-gray-300 text-sm">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
