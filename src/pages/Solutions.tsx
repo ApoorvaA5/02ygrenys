@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { FaSearch, FaChartLine, FaIndustry, FaClipboardCheck, FaTasks, FaUsers, FaEye, FaShieldAlt, FaTools } from 'react-icons/fa';
-import solutionsBanner from '../assets/solutionsBanner.png'; // Ensure correct path and capitalization
+import solutionsBanner from "../assets/solutionsBanner.png";
+
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
