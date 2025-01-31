@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Mail, Building2, Globe } from 'lucide-react';
+import { MapPin, Mail } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -38,28 +38,44 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* North America */}
+          {/* North America (Small Map Icon) */}
           <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 opacity-0 animate-[fadeSlideUp_0.6s_ease-out_0.5s_forwards]">
             <div className="flex items-center mb-4">
-              <Building2 className="w-6 h-6 text-[#00B4D8] mr-3" />
+              <a 
+                href="https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg" 
+                  alt="North America Map" 
+                  className="w-6 h-6 rounded-md mr-3"
+                />
+              </a>
               <h3 className="text-xl font-semibold text-white">North America</h3>
             </div>
-            <div className="space-y-2">
-              <p className="text-gray-400">Mike Swartzlander</p>
-              <p className="text-gray-400">+1-614-849-8257</p>
-            </div>
+            <p className="text-gray-400">Mike Swartzlander</p>
+            <p className="text-gray-400">+1-614-849-8257</p>
           </div>
 
-          {/* UK & Europe */}
+          {/* UK & Europe (Small Map Icon) */}
           <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 opacity-0 animate-[fadeSlideUp_0.6s_ease-out_0.6s_forwards]">
             <div className="flex items-center mb-4">
-              <Globe className="w-6 h-6 text-[#00B4D8] mr-3" />
+              <a 
+                href="https://cdn.britannica.com/29/22529-004-ED1907BE/Union-Flag-Cross-St-Andrew-of-George.jpg" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="https://cdn.britannica.com/29/22529-004-ED1907BE/Union-Flag-Cross-St-Andrew-of-George.jpg" 
+                  alt="UK & Europe Map" 
+                  className="w-6 h-6 rounded-md mr-3"
+                />
+              </a>
               <h3 className="text-xl font-semibold text-white">UK & Europe</h3>
             </div>
-            <div className="space-y-2">
-              <p className="text-gray-400">Mike Ellis - ISS</p>
-              <p className="text-gray-400">+44 7919 566937</p>
-            </div>
+            <p className="text-gray-400">Mike Ellis - ISS</p>
+            <p className="text-gray-400">+44 7919 566937</p>
           </div>
         </div>
 

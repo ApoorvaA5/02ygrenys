@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Mail, Building2, Globe } from 'lucide-react';
+import { MapPin, Mail } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +11,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
   };
 
@@ -54,10 +53,14 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* North America */}
+          {/* North America (Small Map) */}
           <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
-              <Building2 className="w-6 h-6 text-[#00B4D8] mr-3" />
+              <img
+                src="https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg"
+                alt="North America Map"
+                className="w-6 h-6 rounded-md mr-3"
+              />
               <h3 className="text-xl font-semibold">North America</h3>
             </div>
             <div className="space-y-2">
@@ -67,10 +70,14 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* UK & Europe */}
+          {/* UK & Europe (Small Map) */}
           <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
-              <Globe className="w-6 h-6 text-[#00B4D8] mr-3" />
+              <img
+                src="https://cdn.britannica.com/29/22529-004-ED1907BE/Union-Flag-Cross-St-Andrew-of-George.jpg"
+                alt="UK & Europe Map"
+                className="w-6 h-6 rounded-md mr-3"
+              />
               <h3 className="text-xl font-semibold">UK & Europe</h3>
             </div>
             <div className="space-y-2">
