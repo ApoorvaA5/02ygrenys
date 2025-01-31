@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { FaSearch, FaChartLine, FaIndustry, FaClipboardCheck, FaTasks, FaUsers, FaEye, FaShieldAlt, FaTools } from 'react-icons/fa';
-import solutionsBanner from "../assets/solutionsBanner.jpeg";
-
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -76,7 +74,7 @@ const Solutions: React.FC = () => {
       {/* Banner Section */}
       <div
         style={{
-          backgroundImage: `url(${solutionsBanner})`,
+          backgroundImage: `url(/solutionsBanner.jpeg)`, // Updated to use the public folder path
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           height: '90vh',
@@ -146,4 +144,5 @@ const Solutions: React.FC = () => {
 };
 
 export default Solutions;
+
 
