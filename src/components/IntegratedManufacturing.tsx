@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const features = [
@@ -44,51 +44,89 @@ const features = [
 ];
 
 const IntegratedManufacturing = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % features.length);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="bg-gray-900 py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#00B4D8]">
-          Integrated Off-Shore Manufacturing
-        </h2>
+    <div className="bg-gray-900 py-20 relative overflow-hidden">
+      <motion.div 
+        className="absolute inset-0 opacity-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.2 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+      </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-6 relative">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#00B4D8]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Integrated Off-Shore Manufacturing
+        </motion.h2>
+
+        {/* Cards Container */}
+        <div className="flex justify-between space-x-4">
           {features.map((feature, index) => (
             <motion.div 
               key={index}
-              className="bg-white rounded-lg p-8 shadow-xl transform transition-all duration-500"
-              animate={{ scale: activeIndex === index ? 1.05 : 1 }}
-              transition={{ type: "spring", stiffness: 100 }}
+              className="relative overflow-hidden group bg-white rounded-lg p-8 shadow-xl w-1/4"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 + index * 0.3 }}
+              whileHover={{ scale: 1.05, y: -5 }}
             >
-              <div className="flex flex-col h-full">
-                <div className="mb-6 flex flex-col items-center">
-                  <img src={feature.image} alt={feature.title} className="w-20 h-20 object-cover mb-4 rounded-full" />
-                  <h3 className="text-xl font-bold text-[#00B4D8] text-center">
-                    {feature.title}
-                  </h3>
-                </div>
-                <ul className="space-y-3 text-gray-700">
+              <motion.div
+                className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-skyblue-500 to-blue-500"
+                initial={{ scaleX: 0, opacity: 0 }}
+                animate={{ scaleX: 1, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              />
+              <div className="relative flex flex-col items-center">
+                <motion.div
+                  className="relative w-20 h-20 mb-6"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 + index * 0.3 }}
+                >
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-skyblue-500/20 to-blue-500/20 rounded-full"
+                    animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                  />
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-tr from-blue-400/30 via-skyblue-400/30 to-blue-400/30 rounded-full"
+                    animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                  />
+                  <motion.img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-20 h-20 object-cover rounded-full"
+                  />
+                </motion.div>
+                <h3 className="text-xl font-bold text-[#00B4D8] text-center">{feature.title}</h3>
+                <ul className="space-y-3 text-gray-700 text-center">
                   {feature.points.map((point, pointIndex) => (
-                    <li 
+                    <motion.li 
                       key={pointIndex}
-                      className="flex items-start group"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: 1 + pointIndex * 0.1 }}
+                      className="flex items-start"
                     >
-                      <span className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-[#00B4D8] flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />
-                      <span className="group-hover:text-[#00B4D8] transition-colors duration-300">
-                        {point}
-                      </span>
-                    </li>
+                      <span className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-[#00B4D8] flex-shrink-0" />
+                      <span className="transition-colors duration-300">{point}</span>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
+              <motion.div
+                className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue-500/10 via-skyblue-500/10 to-transparent rounded-tl-full"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 0.15 }}
+                transition={{ delay: 0.5 + index * 0.6, duration: 0.5 }}
+              />
             </motion.div>
           ))}
         </div>

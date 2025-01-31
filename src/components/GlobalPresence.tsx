@@ -24,7 +24,7 @@ const GlobalPresence = () => {
               and fully integrated supply chain solutions from India, proudly
               serving a worldwide Industrial OEM customer base across the{' '}
               <span className="text-blue-500 font-semibold">
-                United States, Canada, UK, Europe, New Zealand, China & Australia
+                US, Canada, UK, Europe, New Zealand, China & Australia
               </span>
               , spanning multiple industrial segments.
             </p>
