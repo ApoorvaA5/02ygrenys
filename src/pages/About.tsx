@@ -65,7 +65,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* About Section */}
+ 
      
 
 
@@ -290,7 +290,7 @@ const AboutUs = () => {
         <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl opacity-10 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
         <div className="relative flex flex-col lg:flex-row items-center gap-8">
-          {/* Image */}
+        
           <img
             src={leader.image}
             alt={leader.name}
