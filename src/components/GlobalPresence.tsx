@@ -10,7 +10,7 @@ const GlobalPresence = () => {
           {/* Content Section - Left Side */}
           <div
             className="lg:w-1/2"
-            data-aos="fade-right" // AOS animation for fade-in effect
+            data-aos="fade-right" 
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               <span className="text-blue-600">CONNECTING INDIA</span> TO{' '}
