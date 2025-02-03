@@ -14,7 +14,7 @@ const GlobalPresence = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               <span className="text-blue-600">CONNECTING INDIA</span> TO{' '}
-              <span className="text-blue-600">GLOBAL INDUSTRIAL OEMs</span>
+  +            <span className="text-blue-600">GLOBAL INDUSTRIAL OEMs</span>
             </h2>
             <p className="text-lg text-gray-700 mb-8">
               We are leaders in providing{' '}
