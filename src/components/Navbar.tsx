@@ -11,7 +11,8 @@ const productCategories = [
   { title: 'Machined Components', path: '/products/machined-components' },
   { title: 'Electric Motor Coils', path: '/products/electric-motor-coils' },
   { title: 'Forgings', path: '/products/forgings' },
-  { title: 'Plastics, Composites And Rubber Parts', path: '/products/plastics-composites' }
+  { title: 'Plastics, Composites And Rubber Parts', path: '/products/plastics-composites' },
+  { title: 'WireForming', path: '/products/wireforming' }
 ];
 
 const Navbar = () => {
@@ -128,4 +129,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 

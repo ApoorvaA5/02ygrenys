@@ -14,6 +14,7 @@ import MachinedComponents from './pages/products/MachinedComponents';
 import ElectricMotorCoils from './pages/products/ElectricMotorCoils';
 import Forgings from './pages/products/Forgings';
 import PlasticsComposites from './pages/products/PlasticsComposites';
+import WireForming from './pages/products/wireForming';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/products/electric-motor-coils" element={<ElectricMotorCoils />} />
         <Route path="/products/forgings" element={<Forgings />} />
         <Route path="/products/plastics-composites" element={<PlasticsComposites />} />
+        <Route path="/products/WireForming" element={<WireForming/>}/>
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
