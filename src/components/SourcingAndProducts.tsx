@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ProductsImage from '../assets/Products_Home.jpg';
+import SolutionsImage from '../assets/Solutions_Home.jpg';
 
 const sourcingSolutions = [
   "Manufacturing feasibility analysis",
@@ -32,8 +34,18 @@ const SourcingAndProducts = () => {
     <div className="bg-black py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
           {/* Sourcing Solutions */}
-          <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl p-8 transform hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,180,216,0.3)]">
+          <div 
+            className="relative bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl p-8 transform hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,180,216,0.3)]"
+            style={{
+              backgroundImage: `url(${SolutionsImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundBlendMode: 'overlay', // Watermark effect
+              backgroundColor: 'rgba(0, 0, 0, 0.6)' // Dark overlay
+            }}
+          >
             <h2 className="text-3xl font-bold mb-8 text-[#00B4D8] opacity-0 animate-[fadeSlideUp_0.6s_ease-out_forwards]">
               SOURCING SOLUTIONS
             </h2>
@@ -65,7 +77,16 @@ const SourcingAndProducts = () => {
           </div>
 
           {/* Products */}
-          <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl p-8 transform hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,180,216,0.3)]">
+          <div 
+            className="relative bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl p-8 transform hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,180,216,0.3)]"
+            style={{
+              backgroundImage: `url(${ProductsImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundBlendMode: 'overlay', // Watermark effect
+              backgroundColor: 'rgba(0, 0, 0, 0.6)' // Dark overlay
+            }}
+          >
             <h2 className="text-3xl font-bold mb-8 text-[#00B4D8] opacity-0 animate-[fadeSlideUp_0.6s_ease-out_0.2s_forwards]">
               PRODUCTS
             </h2>
@@ -95,10 +116,11 @@ const SourcingAndProducts = () => {
               View Products
             </Link>
           </div>
+
         </div>
       </div>
     </div>
   );
 };
 
-export default SourcingAndProducts ;
+export default SourcingAndProducts;

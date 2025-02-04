@@ -19,7 +19,7 @@ const stats = [
   },
   {
     icon: CheckCircle,
-    number: "Less Than 100 ppm",
+    number: "Quality < 100 ppm",
     description: "Last 19 Years",
   },
 ];

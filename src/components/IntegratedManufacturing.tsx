@@ -45,7 +45,7 @@ const features = [
 
 const IntegratedManufacturing = () => {
   return (
-    <div className="bg-gray-900 py-20 relative overflow-hidden">
+    <div className="bg-gray-900 py-12 md:py-20 relative overflow-hidden">
       <motion.div 
         className="absolute inset-0 opacity-20"
         initial={{ opacity: 0 }}
@@ -55,9 +55,9 @@ const IntegratedManufacturing = () => {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#00B4D8]"
+          className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-[#00B4D8]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -65,29 +65,29 @@ const IntegratedManufacturing = () => {
           Integrated Off-Shore Manufacturing
         </motion.h2>
 
-        {/* Cards Container */}
-        <div className="flex justify-between space-x-4">
+        {/* Cards Container - Changed to grid for better mobile layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {features.map((feature, index) => (
             <motion.div 
               key={index}
-              className="relative overflow-hidden group bg-white rounded-lg p-8 shadow-xl w-1/4"
+              className="relative overflow-hidden group bg-white rounded-lg p-6 md:p-8 shadow-xl"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 + index * 0.3 }}
-              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ duration: 0.8, delay: 0.2 + index * 0.2 }}
+              whileHover={{ scale: 1.02, y: -5 }}
             >
               <motion.div
                 className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-skyblue-500 to-blue-500"
                 initial={{ scaleX: 0, opacity: 0 }}
                 animate={{ scaleX: 1, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
               />
               <div className="relative flex flex-col items-center">
                 <motion.div
-                  className="relative w-20 h-20 mb-6"
+                  className="relative w-16 h-16 md:w-20 md:h-20 mb-4 md:mb-6"
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 + index * 0.3 }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 + index * 0.2 }}
                 >
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-skyblue-500/20 to-blue-500/20 rounded-full"
@@ -102,19 +102,19 @@ const IntegratedManufacturing = () => {
                   <motion.img
                     src={feature.image}
                     alt={feature.title}
-                    className="w-20 h-20 object-cover rounded-full"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 </motion.div>
-                <h3 className="text-xl font-bold text-[#00B4D8] text-center">{feature.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-[#00B4D8] text-center mb-4">{feature.title}</h3>
                 
-                {/* Properly Aligned List Items */}
-                <ul className="space-y-3 text-gray-700 text-left flex-1 w-full">
+                {/* List Items */}
+                <ul className="space-y-2 md:space-y-3 text-gray-700 text-left flex-1 w-full text-sm md:text-base">
                   {feature.points.map((point, pointIndex) => (
                     <motion.li 
                       key={pointIndex}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 1 + pointIndex * 0.1 }}
+                      transition={{ duration: 0.3, delay: 0.5 + pointIndex * 0.1 }}
                       className="flex items-start gap-x-2"
                     >
                       <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#00B4D8] flex-shrink-0" />
@@ -124,10 +124,10 @@ const IntegratedManufacturing = () => {
                 </ul>
               </div>
               <motion.div
-                className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue-500/10 via-skyblue-500/10 to-transparent rounded-tl-full"
+                className="absolute bottom-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-tl from-blue-500/10 via-skyblue-500/10 to-transparent rounded-tl-full"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 0.15 }}
-                transition={{ delay: 0.5 + index * 0.6, duration: 0.5 }}
+                transition={{ delay: 0.3 + index * 0.4, duration: 0.5 }}
               />
             </motion.div>
           ))}
