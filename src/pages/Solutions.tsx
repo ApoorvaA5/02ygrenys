@@ -6,20 +6,19 @@ import L2 from '../assets/Lab2.jpg';
 import L3 from '../assets/Lab3.jpg';
 import L4 from '../assets/Lab4.jpg';
 
-import PC1 from '../assets/PlastcComposites1.jpg';
-import PC2 from '../assets/PlastcComposites2.jpg';
+import P1 from '../assets/Packaging1.jpg'
+import P2 from '../assets/Packaging2.jpg'
+import P3 from '../assets/Packaging3.jpg'
+import P4 from '../assets/Packaging4.jpg'
+import P5 from '../assets/Packaging5.jpg'
+import P6 from '../assets/Packaging6.jpg'
+import P7 from '../assets/Packaging7.jpg'
+import P8 from '../assets/Packaging8.jpg'
+import P9 from '../assets/Packaging9.jpg'
+import P10 from '../assets/Packaging10.jpg'
+import P11 from '../assets/Packaging11.jpg'
+import P12 from '../assets/Packaging12.jpg'
 
-import PC3 from '../assets/PlastcComposites3.jpg';
-import PC4 from '../assets/PlastcComposites4.jpg';
-import PC5 from '../assets/PlastcComposites5.jpg';
-import PC6 from '../assets/PlastcComposites6.jpg';
-// import PC7 from '../assets/PlastcComposites7.jpg'
-import PC8 from '../assets/PlastcComposites8.jpg';
-import PC9 from '../assets/PlastcComposites9.jpg';
-import PC10 from '../assets/PlastcComposites10.jpg';
-import PC11 from '../assets/PlastcComposites11.jpg';
-import PC12 from '../assets/PlastcComposites12.jpg';
-import PC13 from '../assets/PlastcComposites13.jpg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -222,29 +221,35 @@ const Solutions = () => {
 
         {/* Image Slider */}
         <div className="mb-10 mx-auto max-w-6xl">
-          <Slider
-            dots={true}
-            infinite={true}
-            speed={500}
-            slidesToShow={4}
-            slidesToScroll={1}
-            autoplay={true}
-            autoplaySpeed={2000}
-            responsive={[
-              { breakpoint: 1024, settings: { slidesToShow: 3 } },
-              { breakpoint: 768, settings: { slidesToShow: 2 } },
-              { breakpoint: 480, settings: { slidesToShow: 1 } }
-            ]}
-          >
-            {[PC1, PC2, PC3, PC4, PC5, PC6, PC8, PC9, PC10, PC11, PC12, PC13].map((image, index) => (
-              <div key={index} className="px-2">
-                <div className="w-full bg-white hover:border-2 border-slate-800 px-10 object-cover rounded-lg shadow-lg overflow-hidden flex items-center justify-center">
-                  <img src={image} alt={`Image ${index + 1}`} className="w-full h-full object-contain p-4" />
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
+                            <Slider
+                                dots={true}
+                                infinite={true}
+                                speed={500}
+                                slidesToShow={4}
+                                slidesToScroll={1}
+                                autoplay={true}
+                                autoplaySpeed={2000}
+                                responsive={[
+                                    { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                                    { breakpoint: 768, settings: { slidesToShow: 2 } },
+                                    { breakpoint: 480, settings: { slidesToShow: 1 } },
+                                ]}
+                            >
+                                {[P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12].map(
+                                    (image, index) => (
+                                        <div key={index} className="p-2">
+                                            <div className="w-full h-60 bg-white border  border-gray-300 hover:border-blue-500 transition-all px-6 rounded-lg shadow-lg flex items-center justify-center">
+                                                <img
+                                                    src={image}
+                                                    alt={`Packaging ${index + 1}`}
+                                                    className="w-full h-full object-contain p-2"
+                                                />
+                                            </div>
+                                        </div>
+                                    )
+                                )}
+                            </Slider>
+                        </div>
       </div>
     </div>
   );
