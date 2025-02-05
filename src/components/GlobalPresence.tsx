@@ -1,6 +1,6 @@
 import React from 'react';
 import { Globe2 } from 'lucide-react';
-import mapImage from '../assets/global-presence-map.jpg'; // Adjust the path based on your file structure
+import mapImage from '../assets/global-presence-map.png'; // Adjust the path based on your file structure
 
 const GlobalPresence = () => {
   return (
