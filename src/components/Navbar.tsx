@@ -3,6 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 import Logo from '../assets/logo.png'; // Import the logo
 import IndiaVideo from '../assets/india.mp4'; // Import the India video
 import { ChevronDown } from 'lucide-react';
+import usaFlag from '../assets/usa.png';
+import ukFlag from '../assets/uk.png';
+import canadaFlag from '../assets/canada.png';
+import europeFlag from '../assets/eruope.png';
 
 const productCategories = [
   { title: 'Castings', path: '/products/casting' },
@@ -14,6 +18,13 @@ const productCategories = [
   { title: 'Plastics, Composites And Rubber Parts', path: '/products/plastics-composites' },
   { title: 'WireForming', path: '/products/wireforming' }
 ];
+const flags = [
+  { src: usaFlag, email: "usa@indiasynergy.com" },
+  { src: europeFlag, email: "europe@indiasynergy.com" },
+  { src: canadaFlag, email: "canada@indiasynergy.com" },
+  { src: ukFlag, email: "uk@indiasynergy.com" }
+];
+
 
 const Navbar = () => {
   const location = useLocation();
@@ -109,20 +120,16 @@ const Navbar = () => {
 
         {/* Flags Section */}
         <div className="hidden md:flex items-center space-x-4">
-          {[
-            { src: "https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg", email: "usa@indiasynergy.com" },
-            { src: "https://cdn.britannica.com/66/96866-050-BBAE91CE/Flag-European-Union.jpg", email: "europe@indiasynergy.com" },
-            { src: "https://cdn.britannica.com/68/7068-050-54679E29/Flag-Canada.jpg", email: "canada@indiasynergy.com" },
-            { src: "https://cdn.britannica.com/29/22529-004-ED1907BE/Union-Flag-Cross-St-Andrew-of-George.jpg", email: "uk@indiasynergy.com" }
-          ].map((flag, index) => (
-            <div key={index} className="relative group">
-              <img src={flag.src} alt="Flag" className="w-8 h-5 object-cover" />
-              <span className="absolute hidden group-hover:block text-sm bg-gray-700 text-white rounded p-1 mt-1 left-1/2 transform -translate-x-1/2">
-                {flag.email}
-              </span>
-            </div>
-          ))}
-        </div>
+  {flags.map((flag, index) => (
+    <div key={index} className="relative group">
+      <img src={flag.src} alt="Flag" className="w-8 h-5 object-cover" />
+      <span className="absolute hidden group-hover:block text-sm bg-gray-700 text-white rounded p-1 mt-1 left-1/2 transform -translate-x-1/2">
+        {flag.email}
+      </span>
+    </div>
+  ))}
+</div>
+
       </div>
     </nav>
   );

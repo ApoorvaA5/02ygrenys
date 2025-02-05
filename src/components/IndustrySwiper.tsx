@@ -3,23 +3,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import {
-  Calculator as Excavator,
-  Pipette as Pipe,
-  Cog,
   CarTaxiFrontIcon,
   TrainFrontTunnel,
 } from 'lucide-react';
-import { BiBuildings } from 'react-icons/bi';
-import { GiMiningHelmet } from 'react-icons/gi';
-import { MdOutlineWaterDamage } from 'react-icons/md';
+import { GiMiningHelmet, GiLawnmower } from 'react-icons/gi';
+import { MdOutlineWaterDamage, MdPlumbing, MdOutlineLightbulb, MdLocalFlorist, MdAgriculture } from 'react-icons/md';
 import { FaPumpMedical } from 'react-icons/fa';
+import { TbTree, TbStethoscope, TbGrain } from 'react-icons/tb';
+import { LiaGasPumpSolid, LiaMailBulkSolid } from 'react-icons/lia';
+// Verify this icon exists
+
+
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 const industries = [
   {
-    icon: BiBuildings,
-    name: 'CONSTRUCTION',
+    icon: MdPlumbing,
+    name: 'COMMERCIAL PLUMBING',
     iconSize: 32,
     color: '#4F46E5',
     bgColor: 'rgba(79, 70, 229, 0.1)'
@@ -60,11 +61,46 @@ const industries = [
     bgColor: 'rgba(139, 92, 246, 0.1)'
   },
   {
-    icon: Cog,
-    name: 'OEMS',
+    icon: TbTree,
+    name: 'FORESTRY MACHINERY',
     iconSize: 32,
-    color: '#6366F1',
-    bgColor: 'rgba(99, 102, 241, 0.1)'
+    color: '#228B22',
+    bgColor: 'rgba(34, 139, 34, 0.1)'
+  },
+  {
+    icon: TbStethoscope,
+    name: 'MEDICAL EQUIPMENT',
+    iconSize: 32,
+    color: '#FF4500',
+    bgColor: 'rgba(255, 69, 0, 0.1)'
+  },
+  {
+    icon: LiaMailBulkSolid,
+    name: 'DRY BULK HANDLING',
+    iconSize: 32,
+    color: '#DAA520',
+    bgColor: 'rgba(218, 165, 32, 0.1)'
+  },
+  {
+    icon: LiaGasPumpSolid,
+    name: 'PUMPS',
+    iconSize: 32,
+    color: '#1E90FF',
+    bgColor: 'rgba(30, 144, 255, 0.1)'
+  },
+  {
+    icon:MdAgriculture,
+    name: 'LAWN MOWERS',
+    iconSize: 32,
+    color: '#32CD32',
+    bgColor: 'rgba(50, 205, 50, 0.1)'
+  },
+  {
+    icon: MdOutlineLightbulb,
+    name: 'HEAVY-DUTY LIGHTING',
+    iconSize: 32,
+    color: '#FFD700',
+    bgColor: 'rgba(255, 215, 0, 0.1)'
   }
 ];
 
@@ -114,10 +150,7 @@ const IndustrySwiper = () => {
                       ease: "easeOut"
                     }}
                     className="relative w-24 h-24 rounded-full bg-white flex flex-col items-center justify-center 
-                             shadow-lg hover:shadow-xl transition-all duration-300
-                             before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br 
-                             before:from-white before:to-gray-50 before:opacity-80 before:z-0
-                             overflow-hidden"
+                             shadow-lg hover:shadow-xl transition-all duration-300"
                     style={{ background: industry.bgColor }}
                   >
                     <div className="relative z-10 flex flex-col items-center">
@@ -131,23 +164,11 @@ const IndustrySwiper = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-[11px] font-semibold mt-2 text-gray-700 text-center tracking-wider
-                                 group-hover:text-gray-900 transition-colors duration-300"
+                        className="text-[11px] font-semibold mt-2 text-gray-700 text-center tracking-wider"
                       >
                         {industry.name}
                       </motion.span>
                     </div>
-                    <motion.div
-                      className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100
-                               bg-gradient-to-br from-transparent to-gray-100
-                               transition-opacity duration-300"
-                      animate={{ opacity: [0, 0.1, 0] }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        repeatType: "reverse"
-                      }}
-                    />
                   </motion.div>
                 </motion.div>
               </SwiperSlide>
@@ -158,6 +179,5 @@ const IndustrySwiper = () => {
     </div>
   );
 };
-
 
 export default IndustrySwiper;

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Settings } from "lucide-react";
+import React, { useState } from 'react';
+import { Settings, ChevronDown, ChevronUp } from "lucide-react";
 import solutionsBanner from '../assets/solutionsbanner.jpeg'; 
 import L1 from '../assets/Lab1.jpg';
 import L2 from '../assets/Lab2.jpg';
@@ -22,9 +22,69 @@ import P12 from '../assets/Packaging12.jpg'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import solution from '../assets/solution.mp4';
 
+const faqs = [
+  {
+    id: 1,
+    question: "What services do you offer?",
+    answer: "Synergy specializes in sourcing and contract manufacturing of various engineering products, including casting, metal stamping and fabrication, dies, tools and moulds, precision machined components, electric motor coils, forgings, plastics, composites, and rubber parts and sub-assemblies, as well as finished engineering products to customer designs and specifications. We offer comprehensive solutions, including supplier research, supplier development, quality assurance, and specialized packaging services. International standards such as ASMT, ASME, CSA, DIN, JIS standards, etc., are followed as specified."
+
+  },
+  {
+    id: 2,
+    question: "How do you ensure quality in supplier selection?",
+    answer: "You can contact Synergy by visiting their website at indiasynergy.com and using the contact information provided on the website. They have options for phone, email, and a contact form. Synergy also has a representative in the U.S.A., Mr. Mike Swartzlander."
+
+  },
+  {
+    id: 3,
+    question: "What industries do you serve?",
+   answer:"Yes, Synergy offers custom manufacturing solutions tailored to meet the specific requirements and specificatons of their clients. We work closely with their customers to develop and deliver customized products and components."
+  },
+  {
+    id: 4,
+    question: "How do you handle quality assurance for international shipments?",
+    answer: "Absolutely! Synergy has the capability to handle both small and large-scale production orders. We have a network of well-equipped manufacturing partners with our in-house team of quality engineers and a skilled workforce to meet varying production demands."
+  },
+    {
+    id: 5,
+    question: "What types of packaging solutions do you offer?",
+    answer: "Yes, Synergy offers sourcing services to help clients find the right suppliers for their manufacturing needs. We have an extensive network of trusted manufacturing partners that are carefully audited and qualified and can assist in identifying reliable sources for materials and components."
+  },
+  {
+    id: 6,
+    question: "How do you manage supplier development programs?",
+    answer: "Yes, Synergy is proficient in a wide range of manufacturing processes. We have expertise in casting, machining, metal stamping and fabrication, welding, die production, precision machining, electric motor coils, forgings, plastics, composites, and rubber parts. Additional processes like coating, painting &amp; electro-plating, plasma coating, anodising, etc. are also available with our qualified suppliers."
+  },
+  {
+    id: 7,
+    question: "What quality certifications do you work with?",
+    answer: "Synergy serves a diverse range of industries, including, oil &amp; gas, pumps, valves, railways, mining, aerospace, industrial machinery, heavy duty plumbing, lawn and garden, farm equipment, agricultural equipment, and more. We have the capability to adapt their manufacturing and sourcing services to suit the requirements of different industries."
+  },
+  {
+    id: 8,
+    question: "How do you handle quality issues or disputes?",
+    answer: "Absolutely! Quality assurance is a top priority for Synergy. We have stringent quality control measures, and we are ISO-9001-2015 certified with over 75+ engineers of our own who handle right from RFQ to product quality control, with a high quality performance level of less than 500PPM defect level. We utilize advanced testing for materials and processes and inspection techniques to ensure quality, reliability and repeatability."
+  },
+  {
+    id: 9,
+    question: "What is your approach to sustainable packaging?",
+    answer: "Yes, Synergy has experience in international sourcing and can assist clients in finding suppliers both domestically and internationally. We have a global network and can help source materials and components from various locations. However, majority of the materials are sourced within India unless there is a specific customer specified material that needs to be sourced globally"
+  },
+  {
+    id: 10,
+    question: "How do you ensure continuous improvement in your services?",
+    answer: "To request a quote from Synergy, you can either reach out to them through the contact information provided on their website or fill out the contact form available on their website. Provide details about your requirements with clear engineering drawings, material specifications, quality standards, pictures and if possible, samples, and their team will get back to you after doing feasibility study with a quote and further information"
+  }
+];
 
 const Solutions = () => {
+  const [openId, setOpenId] = useState<number | null>(1);
+
+  const toggleFAQ = (id: number) => {
+    setOpenId(openId === id ? null : id);
+  };
   return (
     <div className="bg-black min-h-screen text-white">
       {/* Hero Section */}
@@ -162,7 +222,9 @@ const Solutions = () => {
               </div>
             </div>
           </div>
-
+          <div className="mt-12 text-center">
+        <h2 className="text-4xl font-bold text-[#00B4D8]">Quality Assurance Lab</h2>
+      </div>
           {/* Lab Quality Images */}
           <div className="mt-12 p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center">
             {[L1, L2, L3, L4].map((image, index) => (
@@ -175,81 +237,132 @@ const Solutions = () => {
               </div>
             ))}
           </div>
+          {/* Quality Assurance Video */}
+          <div className="mt-12 flex justify-center">
+        <video 
+          src={solution} 
+          controls 
+          className="w-100 h-60 rounded-lg shadow-lg"
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
         </div>
 
         {/* Packaging Section */}
         <div className="mb-32">
-          <h2 className="text-5xl font-bold text-[#00B4D8] mb-12">Packaging</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <div className="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800">
-                <p className="text-xl leading-relaxed text-gray-300">
-                  Our packaging solutions ensure secure transit and storage of goods, addressing safety, quality, and integrity. Effective packaging minimizes risk by protecting products from damage, environmental exposure, and contamination.
-                </p>
-                <div className="space-y-6 mt-8">
-                  <div className="border-l-4 border-[#00B4D8] pl-6">
-                    <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Customized Packaging</h3>
-                    <p className="text-gray-300">
-                      Tailored packaging solutions based on product type and transit requirements.
-                    </p>
-                  </div>
-                  <div className="border-l-4 border-[#00B4D8] pl-6">
-                    <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Sustainable Materials</h3>
-                    <p className="text-gray-300">
-                      Eco-friendly packaging options for reduced environmental impact.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-                <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Global Standards Compliance</h3>
-                <p className="text-gray-300">
-                  Adherence to global standards with proper labeling ensures safe & efficient transit.
-                </p>
-              </div>
-              <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-                <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Real-Time Tracking</h3>
-                <p className="text-gray-300">
-                  Leveraging real-time tracking systems helps monitor factors like temperature, humidity, & vibrations during transit.
-                </p>
-              </div>
-            </div>
+  <h2 className="text-5xl font-bold text-[#00B4D8] mb-12">Packaging</h2>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div>
+      <div className="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800">
+        <p className="text-xl leading-relaxed text-gray-300">
+          Our packaging solutions ensure secure transit and storage of goods, addressing safety, quality, and integrity. Effective packaging minimizes risk by protecting products from damage, environmental exposure, and contamination.
+        </p>
+        <div className="space-y-6 mt-8">
+          <div className="border-l-4 border-[#00B4D8] pl-6">
+            <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Customized Packaging</h3>
+            <p className="text-gray-300">
+              Tailored packaging solutions based on product type and transit requirements.
+            </p>
+          </div>
+          <div className="border-l-4 border-[#00B4D8] pl-6">
+            <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Sustainable Materials</h3>
+            <p className="text-gray-300">
+              Eco-friendly packaging options for reduced environmental impact.
+            </p>
           </div>
         </div>
+      </div>
+    </div>
+    <div className="space-y-6">
+      <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
+        <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Global Standards Compliance</h3>
+        <p className="text-gray-300">
+          Adherence to global standards with proper labeling ensures safe & efficient transit.
+        </p>
+      </div>
+      <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
+        <h3 className="text-2xl font-bold text-[#00B4D8] mb-2">Real-Time Tracking</h3>
+        <p className="text-gray-300">
+          Leveraging real-time tracking systems helps monitor factors like temperature, humidity, & vibrations during transit.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-        {/* Image Slider */}
+{/* Export Worthy Packaging Heading (Even Spacing) */}
+<div className="mt-16 mb-10 text-center">
+  <h2 className="text-4xl font-bold text-[#00B4D8]">Export Worthy Packaging</h2>
+</div>
+
+{/* Image Slider */}
         <div className="mb-10 mx-auto max-w-6xl">
-                            <Slider
-                                dots={true}
-                                infinite={true}
-                                speed={500}
-                                slidesToShow={4}
-                                slidesToScroll={1}
-                                autoplay={true}
-                                autoplaySpeed={2000}
-                                responsive={[
-                                    { breakpoint: 1024, settings: { slidesToShow: 3 } },
-                                    { breakpoint: 768, settings: { slidesToShow: 2 } },
-                                    { breakpoint: 480, settings: { slidesToShow: 1 } },
-                                ]}
-                            >
-                                {[P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12].map(
-                                    (image, index) => (
-                                        <div key={index} className="p-2">
-                                            <div className="w-full h-60 bg-white border  border-gray-300 hover:border-blue-500 transition-all px-6 rounded-lg shadow-lg flex items-center justify-center">
-                                                <img
-                                                    src={image}
-                                                    alt={`Packaging ${index + 1}`}
-                                                    className="w-full h-full object-contain p-2"
-                                                />
-                                            </div>
-                                        </div>
-                                    )
-                                )}
-                            </Slider>
-                        </div>
+      <Slider
+     dots={true}
+     infinite={true}
+     speed={500}
+     slidesToShow={4}
+     slidesToScroll={1}
+     autoplay={true}
+     autoplaySpeed={2000}
+     responsive={[
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } },
+     ]}
+     >
+     {[P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12].map((image, index) => (
+      <div key={index} className="p-2">
+        <div className="w-full h-60 bg-white border border-gray-300 hover:border-blue-500 transition-all px-6 rounded-lg shadow-lg flex items-center justify-center">
+          <img
+            src={image}
+            alt={`Packaging ${index + 1}`}
+            className="w-full h-full object-contain p-2"
+          />
+        </div>
+      </div>
+      ))}
+      </Slider>
+      </div>
+    
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <h2 className="text-5xl font-bold text-[#00B4D8] mb-12 text-center">Frequently Asked Questions</h2>
+        <div className="space-y-6 max-w-4xl mx-auto">
+  {faqs.map((faq) => (
+    <div
+      key={faq.id}
+      className="bg-gray-900 rounded-xl overflow-hidden transition-all duration-200 border border-gray-800"
+    >
+      <button
+        className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-800 transition-colors"
+        onClick={() => toggleFAQ(faq.id)}
+      >
+        <span className="text-xl font-medium text-white">
+          {faq.question}
+        </span>
+        {openId === faq.id ? (
+          <ChevronUp className="h-6 w-6 text-[#00B4D8]" />
+        ) : (
+          <ChevronDown className="h-6 w-6 text-[#00B4D8]" />
+        )}
+        </button>
+      
+        <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          openId === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+        >
+        <p className="px-8 py-6 text-gray-300 text-lg leading-relaxed border-t border-gray-800">
+          {faq.answer}
+        </p>
+       </div>
+       </div>
+      ))}
+      </div>
       </div>
     </div>
   );

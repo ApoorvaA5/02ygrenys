@@ -15,6 +15,7 @@ import ElectricMotorCoils from './pages/products/ElectricMotorCoils';
 import Forgings from './pages/products/Forgings';
 import PlasticsComposites from './pages/products/PlasticsComposites';
 import WireForming from './pages/products/wireForming';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

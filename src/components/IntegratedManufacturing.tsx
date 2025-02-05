@@ -1,10 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Manufacture from '../assets/manufacture.jpg';
+import Revolution from '../assets/revolution.jpeg';
+import Complixities from '../assets/complixities.jpg'
+import Complex from '../assets/complex.jpg';
+
 
 const features = [
   {
     title: "Manufacturing Expertise",
-    image: "https://thumbs.dreamstime.com/b/quality-control-qc-engineer-monitoring-checking-machine-system-manufacturing-factory-230764631.jpg",
+    image: Manufacture,
     points: [
       "Team of 100+ engineers",
       "Precision machining",
@@ -16,7 +21,7 @@ const features = [
   },
   {
     title: "Revolutionizing Global Manufacturing",
-    image: "https://media.licdn.com/dms/image/v2/D4D12AQFMT26TB3ABqw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1684476386350?e=2147483647&v=beta&t=y1JHHvZVTXrYtitH2_TBIJsLpm42UAuQ0QMyi7Cd4e4",
+    image:Revolution,
     points: [
       "Trusted partner for nearly two decades in manufacturing solutions.",
       "Delivering high-quality products and world-class services.",
@@ -25,7 +30,7 @@ const features = [
   },
   {
     title: "Reassuring Quality",
-    image: "https://www.friso.com.sg/sites/default/files/styles/article_image_banner/public/2020-12/3%20Milk%20QC%20Concern%20Content-Card.jpg.webp?itok=XzkQ2xOQ",
+    image: Complixities,
     points: [
       "Every sourcing strategy focuses on striking the right balance between best-in-class quality and competitiveness.",
       "We strive to help you achieve  \"true\" savings with zero compromise on quality.",
@@ -34,7 +39,7 @@ const features = [
   },
   {
     title: "Manufacturing Complexities Simplified",
-    image: "https://blog.forgestik.com/hs-fs/hubfs/Images_Blog%20Headers%20and%20Content/iStock-1049259612_manuf-complex_compressed.jpg?width=1920&height=514&name=iStock-1049259612_manuf-complex_compressed.jpg",
+    image:Complex,
     points: [
       "Fully integrated value-added sourcing and manufacturing solutions.",
       "Eliminates complexities in lean supply chain management.",
