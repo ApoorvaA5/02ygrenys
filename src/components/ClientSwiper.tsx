@@ -3,14 +3,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import Manufacturing from '../assets/Manufacturing.png'; 
 import Phoenix from '../assets/Phoenix.png';
-import Mcdeniel from '../assets/Mcdeniel.png';
-import bradken from '../assets/bradken.png';
+import Anchor from '../assets/anchorFluid.jpg';
+import Finish from '../assets/finish.png';
 import TandS from '../assets/T-S.png';
 import Red from '../assets/Red.png';
 import SPC from '../assets/SPC.png';
 import Stanley from '../assets/StanleyBlack.png';
 import unicrest from '../assets/Unicrest.png';
 import UEE from '../assets/UEE.png';
+import Guard from '../assets/guard.png';
+import Tube from '../assets/tube.png';
+import Tiger from '../assets/tiger.png';
+import Ukm from '../assets/ukm.png';
 
 const clients = [
   {
@@ -27,14 +31,14 @@ const clients = [
   },
   {
     id: "3",
-    name: "Mcdeniel",
-    logo: Mcdeniel,
+    name: "Anchor",
+    logo: Anchor,
     place: "USA"
   },
   {
     id: "4",
-    name: "Bradken",
-    logo: bradken,
+    name: "Finish",
+    logo: Finish,
     place: "USA"
   },
   {
@@ -73,6 +77,31 @@ const clients = [
     logo: UEE,
     place: "Canada"
   },
+  {
+    id: "11",
+    name: "Guard",
+    logo: Guard,
+    place: "Canada"
+  },
+  {
+    id: "12",
+    name: "Tube",
+    logo: Tube,
+    place: "Canada"
+  },
+  {
+    id: "13",
+    name: "Tiger",
+    logo: Tiger,
+    place: "Canada"
+  },
+  {
+    id: "14",
+    name: "UKM",
+    logo: Ukm,
+    place: "Canada"
+  },
+
 ];
 
 const ClientSwiper = () => {
@@ -112,16 +141,12 @@ const ClientSwiper = () => {
             <SwiperSlide key={client.id}>
               <div 
                 className="flex flex-col items-center justify-center h-32 transition-all duration-300 transform hover:scale-110"
-                style={{
-                  animation: `fadeSlideUp 0.5s ease-out forwards`,
-                }}
+                style={{ animation: `fadeSlideUp 0.5s ease-out forwards` }}
               >
                 <img 
                   src={client.logo}
                   alt={client.name}
-                  className={`max-w-[80%] object-contain mb-2 ${
-                    client.name === "Mcdeniel" ? "h-32" : "max-h-[60%]"
-                  }`}
+                  className="max-w-[80%] object-contain max-h-[60%] mb-2"
                 />
                 <p className="text-sm text-gray-800 font-medium">{client.place}</p>
               </div>
@@ -132,5 +157,6 @@ const ClientSwiper = () => {
     </div>
   );
 };
+
 
 export default ClientSwiper;
