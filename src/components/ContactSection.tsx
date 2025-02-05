@@ -84,7 +84,7 @@ const ContactSection = () => {
           <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
             <img src={usa} alt="USA Flag" className="w-6 h-6 rounded-md mr-3" />
-              <h3 className="text-xl font-semibold">North America</h3>
+              <h3 className="text-xl font-semibold text-white ">North America</h3>
             </div>
             <div className="space-y-2">
               <p className="text-gray-400">Mike Swartzlander</p>
@@ -100,7 +100,7 @@ const ContactSection = () => {
           <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
             <img src={uk} alt="UK Flag" className="w-6 h-6 rounded-md mr-3" />
-              <h3 className="text-xl font-semibold">UK & Europe</h3>
+              <h3 className="text-xl font-semibold  text-white">UK & Europe</h3>
             </div>
             <div className="space-y-2">
               <p className="text-gray-400">Mike Ellis - ISS</p>

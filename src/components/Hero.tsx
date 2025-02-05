@@ -16,11 +16,11 @@ const Hero = () => {
   ];
 
   const headings = [
-    'LOCAL GLOBAL',
+    'LOCALLY GLOBAL',
     'REASSURING QUALITY',
     'MANUFACTURING COMPLEXITY SIMPLIFIED',
     'ATTENTION TO DETAIL',
-    'SOLUTION FOR DEMANDING APPLICATION',
+    'SOLUTIONS FOR DEMANDING APPLICATIONS',
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
