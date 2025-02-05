@@ -27,54 +27,54 @@ import solution from '../assets/solution.mp4';
 const faqs = [
   {
     id: 1,
-    question: "What services do you offer?",
+    question: "What does Synergy specialize in?",
     answer: "Synergy specializes in sourcing and contract manufacturing of various engineering products, including casting, metal stamping and fabrication, dies, tools and moulds, precision machined components, electric motor coils, forgings, plastics, composites, and rubber parts and sub-assemblies, as well as finished engineering products to customer designs and specifications. We offer comprehensive solutions, including supplier research, supplier development, quality assurance, and specialized packaging services. International standards such as ASMT, ASME, CSA, DIN, JIS standards, etc., are followed as specified."
 
   },
   {
     id: 2,
-    question: "How do you ensure quality in supplier selection?",
+    question: "How can I contact Synergy?",
     answer: "You can contact Synergy by visiting their website at indiasynergy.com and using the contact information provided on the website. They have options for phone, email, and a contact form. Synergy also has a representative in the U.S.A., Mr. Mike Swartzlander."
 
   },
   {
     id: 3,
-    question: "What industries do you serve?",
+    question: "Does Synergy provide custom manufacturing solutions?",
    answer:"Yes, Synergy offers custom manufacturing solutions tailored to meet the specific requirements and specificatons of their clients. We work closely with their customers to develop and deliver customized products and components."
   },
   {
     id: 4,
-    question: "How do you handle quality assurance for international shipments?",
+    question: "Can Synergy Handle large-scale production orders?",
     answer: "Absolutely! Synergy has the capability to handle both small and large-scale production orders. We have a network of well-equipped manufacturing partners with our in-house team of quality engineers and a skilled workforce to meet varying production demands."
   },
     {
     id: 5,
-    question: "What types of packaging solutions do you offer?",
+    question: "Does Synergy provides Sourcing services?",
     answer: "Yes, Synergy offers sourcing services to help clients find the right suppliers for their manufacturing needs. We have an extensive network of trusted manufacturing partners that are carefully audited and qualified and can assist in identifying reliable sources for materials and components."
   },
   {
     id: 6,
-    question: "How do you manage supplier development programs?",
+    question: "Can Synergy handle multiple manufacturing processes?",
     answer: "Yes, Synergy is proficient in a wide range of manufacturing processes. We have expertise in casting, machining, metal stamping and fabrication, welding, die production, precision machining, electric motor coils, forgings, plastics, composites, and rubber parts. Additional processes like coating, painting &amp; electro-plating, plasma coating, anodising, etc. are also available with our qualified suppliers."
   },
   {
     id: 7,
-    question: "What quality certifications do you work with?",
+    question: "What industries does Synergy cater to?",
     answer: "Synergy serves a diverse range of industries, including, oil &amp; gas, pumps, valves, railways, mining, aerospace, industrial machinery, heavy duty plumbing, lawn and garden, farm equipment, agricultural equipment, and more. We have the capability to adapt their manufacturing and sourcing services to suit the requirements of different industries."
   },
   {
     id: 8,
-    question: "How do you handle quality issues or disputes?",
+    question: "Does Synergy offer quality assurance for thier products?",
     answer: "Absolutely! Quality assurance is a top priority for Synergy. We have stringent quality control measures, and we are ISO-9001-2015 certified with over 75+ engineers of our own who handle right from RFQ to product quality control, with a high quality performance level of less than 500PPM defect level. We utilize advanced testing for materials and processes and inspection techniques to ensure quality, reliability and repeatability."
   },
   {
     id: 9,
-    question: "What is your approach to sustainable packaging?",
+    question: "Can Synergy handle international sourcing requirements?",
     answer: "Yes, Synergy has experience in international sourcing and can assist clients in finding suppliers both domestically and internationally. We have a global network and can help source materials and components from various locations. However, majority of the materials are sourced within India unless there is a specific customer specified material that needs to be sourced globally"
   },
   {
     id: 10,
-    question: "How do you ensure continuous improvement in your services?",
+    question: "How can I request a quote from Synergy?",
     answer: "To request a quote from Synergy, you can either reach out to them through the contact information provided on their website or fill out the contact form available on their website. Provide details about your requirements with clear engineering drawings, material specifications, quality standards, pictures and if possible, samples, and their team will get back to you after doing feasibility study with a quote and further information"
   }
 ];

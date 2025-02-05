@@ -1,12 +1,12 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
-import { motion } from 'framer-motion';
+import { motion, pipe } from 'framer-motion';
 import {
   CarTaxiFrontIcon,
   TrainFrontTunnel,
 } from 'lucide-react';
-import { GiMiningHelmet, GiLawnmower } from 'react-icons/gi';
+import { GiMiningHelmet, GiLawnmower, GiPipeOrgan, GiValve } from 'react-icons/gi';
 import { MdOutlineWaterDamage, MdPlumbing, MdOutlineLightbulb, MdLocalFlorist, MdAgriculture } from 'react-icons/md';
 import { FaPumpMedical } from 'react-icons/fa';
 import { TbTree, TbStethoscope, TbGrain } from 'react-icons/tb';
@@ -16,6 +16,7 @@ import { LiaGasPumpSolid, LiaMailBulkSolid } from 'react-icons/lia';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import { BsDropletFill } from 'react-icons/bs';
 
 const industries = [
   {
@@ -47,8 +48,15 @@ const industries = [
     bgColor: 'rgba(59, 130, 246, 0.1)'
   },
   {
-    icon: FaPumpMedical,
+    icon:GiPipeOrgan,
     name: 'HYDRAULICS',
+    iconSize: 32,
+    color: '#10B981',
+    bgColor: 'rgba(16, 185, 129, 0.1)'
+  },
+  {
+    icon:GiValve,
+    name: 'VALVES',
     iconSize: 32,
     color: '#10B981',
     bgColor: 'rgba(16, 185, 129, 0.1)'

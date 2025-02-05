@@ -53,27 +53,27 @@ const ContactSection = () => {
       {/* Email List with Flags */}
       <div className="space-y-2">
         <div className="flex items-center space-x-2">
-          <img src={india} alt="India" className="w-5 h-5" />
+          <img src={india} alt="India" className="w-6 h-6 rounded-md mr-3" />
           <p className="text-gray-400">mail@indiasynergy.com</p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <img src={usa} alt="USA" className="w-5 h-5" />
+          <img src={usa} alt="USA" className="w-6 h-6 rounded-md mr-3" />
           <p className="text-gray-400">usa@indiasynergy.com</p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <img src={eruope} alt="Europe" className="w-5 h-5" />
+          <img src={eruope} alt="Europe" className="w-6 h-6 rounded-md mr-3" />
           <p className="text-gray-400">europe@indiasynergy.com</p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <img src={canada} alt="Canada" className="w-5 h-5" />
+          <img src={canada} alt="Canada" className="w-6 h-6 rounded-md mr-3" />
           <p className="text-gray-400">canada@indiasynergy.com</p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <img src={uk} alt="UK" className="w-5 h-5" />
+          <img src={uk} alt="UK" className="w-6 h-6 rounded-md mr-3" />
           <p className="text-gray-400">uk@indiasynergy.com</p>
         </div>
       </div>
@@ -81,43 +81,35 @@ const ContactSection = () => {
 
 
           {/* North America (Small Map Icon) */}
-          <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 opacity-0 animate-[fadeSlideUp_0.6s_ease-out_0.5s_forwards]">
+          <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
-              <a 
-                href="https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <img 
-                  src="https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg" 
-                  alt="North America Map" 
-                  className="w-6 h-6 rounded-md mr-3"
-                />
-              </a>
-              <h3 className="text-xl font-semibold text-white">North America</h3>
+            <img src={usa} alt="USA Flag" className="w-6 h-6 rounded-md mr-3" />
+              <h3 className="text-xl font-semibold">North America</h3>
             </div>
-            <p className="text-gray-400">Mike Swartzlander</p>
-            <p className="text-gray-400">+1-614-849-8257</p>
+            <div className="space-y-2">
+              <p className="text-gray-400">Mike Swartzlander</p>
+              <p className="text-gray-400">mike@indiasynergy.com</p>
+              <div className="flex items-center mt-4">
+              <Phone className="w-5 h-5 text-[#00B4D8] mr-3" />
+              <p className="text-gray-400">+1-614-849-8257</p> 
+              </div> 
+            </div>
           </div>
 
           {/* UK & Europe (Small Map Icon) */}
-          <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 opacity-0 animate-[fadeSlideUp_0.6s_ease-out_0.6s_forwards]">
+          <div className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
-              <a 
-                href="https://cdn.britannica.com/29/22529-004-ED1907BE/Union-Flag-Cross-St-Andrew-of-George.jpg" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <img 
-                  src="https://cdn.britannica.com/29/22529-004-ED1907BE/Union-Flag-Cross-St-Andrew-of-George.jpg" 
-                  alt="UK & Europe Map" 
-                  className="w-6 h-6 rounded-md mr-3"
-                />
-              </a>
-              <h3 className="text-xl font-semibold text-white">UK & Europe</h3>
+            <img src={uk} alt="UK Flag" className="w-6 h-6 rounded-md mr-3" />
+              <h3 className="text-xl font-semibold">UK & Europe</h3>
             </div>
-            <p className="text-gray-400">Mike Ellis - ISS</p>
-            <p className="text-gray-400">+44 7919 566937</p>
+            <div className="space-y-2">
+              <p className="text-gray-400">Mike Ellis - ISS</p>
+              <p className="text-gray-400">mikeellis@indiasynergy.com</p>
+              <div className="flex items-center mt-4">
+              <Phone className="w-5 h-5 text-[#00B4D8] mr-3" />
+              <p className="text-gray-400">+44 7919 566937</p> 
+              </div>
+            </div>
           </div>
         </div>
 
