@@ -53,27 +53,27 @@ const ContactSection = () => {
       {/* Email List with Flags */}
       <div className="space-y-2">
         <div className="flex items-center space-x-2">
-          <img src={india} alt="India" className="w-6 h-6 rounded-md mr-3" />
+          <img src={india} alt="India" className="w-6 h-6  mr-3" />
           <p className="text-gray-400">mail@indiasynergy.com</p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <img src={usa} alt="USA" className="w-6 h-6 rounded-md mr-3" />
+          <img src={usa} alt="USA" className="w-6 h-6  mr-3" />
           <p className="text-gray-400">usa@indiasynergy.com</p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <img src={eruope} alt="Europe" className="w-6 h-6 rounded-md mr-3" />
+          <img src={eruope} alt="Europe" className="w-6 h-6  mr-3" />
           <p className="text-gray-400">europe@indiasynergy.com</p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <img src={canada} alt="Canada" className="w-6 h-6 rounded-md mr-3" />
+          <img src={canada} alt="Canada" className="w-6 h-6  mr-3" />
           <p className="text-gray-400">canada@indiasynergy.com</p>
         </div>
 
         <div className="flex items-center space-x-2">
-          <img src={uk} alt="UK" className="w-6 h-6 rounded-md mr-3" />
+          <img src={uk} alt="UK" className="w-6 h-6 mr-3" />
           <p className="text-gray-400">uk@indiasynergy.com</p>
         </div>
       </div>
