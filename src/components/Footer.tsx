@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Check } from 'lucide-react';
+import { Check,Linkedin } from 'lucide-react';
+
+
 
 const Footer = () => {
   return (
@@ -130,6 +132,17 @@ const Footer = () => {
                 <span className="font-semibold text-white">E-mail:</span>{' '}
                 <a href="mailto:mail@indiasynergy.com" className="text-[#00B4D8] hover:underline">
                   mail@indiasynergy.com
+                </a>
+              </p>
+              <p>
+                <a 
+                  href="https://www.linkedin.com/company/synergy-global-sourcing/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center space-x-2 text-[#00B4D8] hover:underline"
+                >
+                  <Linkedin className="w-6 h-6" />
+                  <span>Follow us on LinkedIn</span>
                 </a>
               </p>
             </div>
