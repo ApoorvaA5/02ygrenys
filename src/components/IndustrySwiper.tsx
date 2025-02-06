@@ -23,13 +23,13 @@ import Railway from '../assets/railway.png';
 
 // Define industries with image paths
 const industries = [
-  { icon:Commercial, name: 'COMMERCIAL PLUMBING', bgColor: 'rgba(79, 70, 229, 0.1)' },
+  { icon: Commercial, name: 'COMMERCIAL PLUMBING', bgColor: 'rgba(79, 70, 229, 0.1)' },
   { icon: Mining, name: 'MINING', bgColor: 'rgba(245, 158, 11, 0.1)' },
   { icon: Safety, name: 'SAFETY AIR GUN', bgColor: 'rgba(239, 68, 68, 0.1)' },
   { icon: Oiland, name: 'OIL & GAS', bgColor: 'rgba(59, 130, 246, 0.1)' },
   { icon: Hydraulics, name: 'HYDRAULICS', bgColor: 'rgba(16, 185, 129, 0.1)' },
   { icon: Valves, name: 'VALVES', bgColor: 'rgba(16, 185, 129, 0.1)' },
-  { icon: Railway, name: 'RAILWAYS ', bgColor: 'rgba(139, 92, 246, 0.1)' },
+  { icon: Railway, name: 'RAILWAYS', bgColor: 'rgba(139, 92, 246, 0.1)' },
   { icon: Forestry, name: 'FORESTRY MACHINERY', bgColor: 'rgba(34, 139, 34, 0.1)' },
   { icon: Medical, name: 'MEDICAL EQUIPMENT', bgColor: 'rgba(255, 69, 0, 0.1)' },
   { icon: Drybulk, name: 'DRY BULK HANDLING', bgColor: 'rgba(218, 165, 32, 0.1)' },
@@ -65,7 +65,7 @@ const IndustrySwiper = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                    transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
                     className="relative w-24 h-24 rounded-full bg-white flex flex-col items-center justify-center 
                              shadow-lg hover:shadow-xl transition-all duration-300"
                     style={{ background: industry.bgColor }}
@@ -80,7 +80,13 @@ const IndustrySwiper = () => {
                         transition={{ delay: 0.2 }}
                         className="text-[11px] font-semibold mt-2 text-gray-700 text-center tracking-wider"
                       >
-                        {industry.name}
+                        {industry.name === "SAFETY AIR GUN" ? (
+                          <>
+                            SAFETY AIR <br /> GUN
+                          </>
+                        ) : (
+                          industry.name
+                        )}
                       </motion.span>
                     </div>
                   </motion.div>
@@ -95,3 +101,4 @@ const IndustrySwiper = () => {
 };
 
 export default IndustrySwiper;
+

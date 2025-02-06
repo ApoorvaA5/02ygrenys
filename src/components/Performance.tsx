@@ -1,5 +1,6 @@
 import React from "react";
 import { Cog, Timer, CheckCircle, Settings } from "lucide-react";
+import PerformanceImage from "../assets/performance.png"; // ✅ Renamed to avoid conflict
 
 const stats = [
   {
@@ -30,7 +31,7 @@ const Performance = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2574"
+          src={PerformanceImage} // ✅ Use imported image
           alt="Performance Background"
           className="w-full h-full object-cover"
         />
@@ -40,7 +41,7 @@ const Performance = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-white">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Performance Speaks for Itself
         </h2>
 
