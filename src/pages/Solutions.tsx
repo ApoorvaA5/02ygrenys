@@ -380,7 +380,7 @@ const Solutions = () => {
         <p className="text-gray-200 italic relative z-10 leading-relaxed">
           "We have been partnering with Synergy Global Sourcing for over 9 years now. Our journey together has been both rewarding and built on trust, commitment, and growth—some might say we have 'Synergy' together. We have experienced unsurpassed professionalism working with Ketan, Nitin, and the rest of the Synergy Global Sourcing team. In 2017, Unit Electrical Engineering Ltd. (UEE) proudly presented Synergy Global Sourcing with our Outstanding Supplier Achievement Award, a decision made unanimously. We highly endorse Synergy Global Sourcing to any future clients."
         </p>
-        <p className="text-[#00B4D8] font-semibold">Business Unit Head, Canada</p>
+        <p className="text-[#00B4D8] font-semibold">Mining OEM from Canada</p>
       </div>
     </div>
 
@@ -391,7 +391,7 @@ const Solutions = () => {
         <p className="text-gray-200 italic relative z-10 leading-relaxed">
           "We have worked with Ketan and his team at Synergy for over 10 years, collaborating on many projects. They have consistently demonstrated openness, commitment, and dedication to finding cost-effective solutions for our sourcing challenges. We highly recommend Synergy Global Sourcing to any prospective client."
         </p>
-        <p className="text-[#00B4D8] font-semibold">Vice President, USA (NJ)</p>
+        <p className="text-[#00B4D8] font-semibold">Tube manipulation OEM from UK</p>
       </div>
     </div>
 
@@ -402,7 +402,7 @@ const Solutions = () => {
         <p className="text-gray-200 italic relative z-10 leading-relaxed">
           "WestShore Engineering Inc. has had the pleasure of working with Ketan and Synergy Global Sourcing for over 10 years. Whenever Synergy is involved in a project, we have full confidence that the product will be accurate and of the highest quality. Their extensive engineering knowledge and professionalism make them one of our best vendors. We look forward to continuing our partnership with Synergy for many years to come."
         </p>
-        <p className="text-[#00B4D8] font-semibold">Business President, USA</p>
+        <p className="text-[#00B4D8] font-semibold">Defence contractor from USA</p>
       </div>
     </div>
   </div>
