@@ -81,25 +81,25 @@ const clients = [
     id: "11",
     name: "Guard",
     logo: Guard,
-    place: "Canada"
+    place: "USA"
   },
   {
     id: "12",
     name: "Tube",
     logo: Tube,
-    place: "Canada"
+    place: "UK"
   },
   {
     id: "13",
     name: "Tiger",
     logo: Tiger,
-    place: "Canada"
+    place: "USA"
   },
   {
     id: "14",
     name: "UKM",
     logo: Ukm,
-    place: "Canada"
+    place: "USA"
   },
 
 ];

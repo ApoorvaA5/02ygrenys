@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Settings, ChevronDown, ChevronUp } from "lucide-react";
-import solutionsBanner from '../assets/solutionsbanner.jpeg'; 
+import { Settings, ChevronDown, ChevronUp,  Quote} from "lucide-react";
+import solutionsBanner from '../assets/solutionsbanner.jpg'; 
 import L1 from '../assets/Lab1.jpg';
 import L2 from '../assets/Lab2.jpg';
 import L3 from '../assets/Lab3.jpg';
@@ -23,6 +23,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import solution from '../assets/solution.mp4';
+
 
 const faqs = [
   {
@@ -364,6 +365,52 @@ const Solutions = () => {
       ))}
       </div>
       </div>
+              
+
+      <div className="mb-0 pb-0">
+  <h2 className="text-5xl font-bold text-center text-[#00B4D8] mb-16 opacity-0 animate-[fadeSlideUp_0.6s_ease-out_forwards]">
+    TESTIMONIALS
+  </h2>
+
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    {/* Testimonial 1 */}
+    <div className="bg-[#001F3F] p-8 rounded-2xl shadow-lg relative opacity-0 animate-[fadeSlideUp_0.6s_ease-out_0.2s_forwards]">
+      <Quote className="absolute top-4 left-4 w-8 h-8 text-[#00B4D8] opacity-30" />
+      <div className="space-y-4">
+        <p className="text-gray-200 italic relative z-10 leading-relaxed">
+          "We have been partnering with Synergy Global Sourcing for over 9 years now. Our journey together has been both rewarding and built on trust, commitment, and growth—some might say we have 'Synergy' together. We have experienced unsurpassed professionalism working with Ketan, Nitin, and the rest of the Synergy Global Sourcing team. In 2017, Unit Electrical Engineering Ltd. (UEE) proudly presented Synergy Global Sourcing with our Outstanding Supplier Achievement Award, a decision made unanimously. We highly endorse Synergy Global Sourcing to any future clients."
+        </p>
+        <p className="text-[#00B4D8] font-semibold">Business Unit Head, Canada</p>
+      </div>
+    </div>
+
+    {/* Testimonial 2 */}
+    <div className="bg-[#001F3F] p-8 rounded-2xl shadow-lg relative opacity-0 animate-[fadeSlideUp_0.6s_ease-out_0.4s_forwards]">
+      <Quote className="absolute top-4 left-4 w-8 h-8 text-[#00B4D8] opacity-30" />
+      <div className="space-y-4">
+        <p className="text-gray-200 italic relative z-10 leading-relaxed">
+          "We have worked with Ketan and his team at Synergy for over 10 years, collaborating on many projects. They have consistently demonstrated openness, commitment, and dedication to finding cost-effective solutions for our sourcing challenges. We highly recommend Synergy Global Sourcing to any prospective client."
+        </p>
+        <p className="text-[#00B4D8] font-semibold">Vice President, USA (NJ)</p>
+      </div>
+    </div>
+
+    {/* Testimonial 3 */}
+    <div className="bg-[#001F3F] p-8 rounded-2xl shadow-lg relative opacity-0 animate-[fadeSlideUp_0.6s_ease-out_0.6s_forwards]">
+      <Quote className="absolute top-4 left-4 w-8 h-8 text-[#00B4D8] opacity-30" />
+      <div className="space-y-4">
+        <p className="text-gray-200 italic relative z-10 leading-relaxed">
+          "WestShore Engineering Inc. has had the pleasure of working with Ketan and Synergy Global Sourcing for over 10 years. Whenever Synergy is involved in a project, we have full confidence that the product will be accurate and of the highest quality. Their extensive engineering knowledge and professionalism make them one of our best vendors. We look forward to continuing our partnership with Synergy for many years to come."
+        </p>
+        <p className="text-[#00B4D8] font-semibold">Business President, USA</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
     </div>
   );
 }
